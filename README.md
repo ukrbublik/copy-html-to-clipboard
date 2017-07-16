@@ -1,6 +1,9 @@
-# Copy html to clipboard [![Build Status](https://travis-ci.org/ukrbublik/copy-html-to-clipboard.svg?branch=master)](https://travis-ci.org/ukrbublik/copy-html-to-clipboard)
+# copy-html-to-clipboard [![Build Status](https://travis-ci.org/ukrbublik/copy-html-to-clipboard.svg?branch=master)](https://travis-ci.org/ukrbublik/copy-html-to-clipboard)
 
 Simple module exposing `copy` function that will try to use [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand#) with fallback to IE-specific `clipboardData` interface and finally, resort to usual `prompt` with proper text content and message.
+
+Forked from [copy-to-clipboard](https://npm.im/copy-to-clipboard) to add html support.
+
 
 # Example
 

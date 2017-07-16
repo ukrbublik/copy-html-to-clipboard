@@ -1,7 +1,7 @@
 {
   "name": "copy-html-to-clipboard",
   "version": "4.0.0",
-  "description": "Copy text or html into clipboard using JS",
+  "description": "Copy text/html into clipboard using JS",
   "main": "index.js",
   "scripts": {
     "pretest": "browserify ./index.js -o ./example/index.js --standalone copyToClipboard",
