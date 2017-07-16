@@ -1,7 +1,7 @@
 {
-  "name": "copy-to-clipboard",
-  "version": "3.0.6",
-  "description": "Copy stuff into clipboard using JS with fallbacks",
+  "name": "copy-html-to-clipboard",
+  "version": "4.0",
+  "description": "Copy text or html into clipboard using JS",
   "main": "index.js",
   "scripts": {
     "pretest": "browserify ./index.js -o ./example/index.js --standalone copyToClipboard",
@@ -16,9 +16,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sudodoki/copy-to-clipboard"
+    "url": "https://github.com/ukrbublik/copy-html-to-clipboard.git"
   },
   "contributors": [
+    {
+      "name": "Denis Oblogin",
+      "url": "https://github.com/ukrbublik"
+    },
     {
       "name": "Aleksej Shvajka",
       "url": "https://github.com/shvaikalesh"

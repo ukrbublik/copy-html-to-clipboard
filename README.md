@@ -1,11 +1,11 @@
-# Copy to clipboard [![Build Status](https://travis-ci.org/sudodoki/copy-to-clipboard.svg?branch=master)](https://travis-ci.org/sudodoki/copy-to-clipboard)
+# Copy html to clipboard [![Build Status](https://travis-ci.org/ukrbublik/copy-html-to-clipboard.svg?branch=master)](https://travis-ci.org/ukrbublik/copy-html-to-clipboard)
 
 Simple module exposing `copy` function that will try to use [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand#) with fallback to IE-specific `clipboardData` interface and finally, resort to usual `prompt` with proper text content and message.
 
 # Example
 
 ```js
-import copy from 'copy-to-clipboard';
+import copy from 'copy-html-to-clipboard';
 
 copy('Text');
 
@@ -13,6 +13,11 @@ copy('Text');
 copy('Text', {
   debug: true,
   message: 'Press #{key} to copy',
+});
+
+// Copy html
+copy('<b>i am bold</b>', {
+  asHtml: true,
 });
 ```
 
@@ -23,6 +28,9 @@ copy('Text', {
 |Value |Default |Notes|
 |------|--------|-----|
 |options.debug  |false| `Boolean`. Optional. Enable output to console. |
+|options.asHtml  |false| `Boolean`. True - use param `text` as html. |
+|options.onlyHtml  |false| `Boolean`. True - if can't copy html to clipboard, don't try to copy text with alternative ways. |
+|options.canUsePrompt  |true| `Boolean`. True - try alternative ugly prompt-way. |
 |options.message|Copy to clipboard: `#{key}`, Enter| `String`. Optional. Prompt message. `*` |
 
 `*` all occurrences of `#{key}` are replaced with `⌘+C` for macOS/iOS users, and `Ctrl+C` otherwise.
@@ -38,15 +46,16 @@ Note: **does not work on some older iOS devices.**
 
 + Can be used as npm package and then leveraged using commonjs bundler/loader:
 ```
-npm i --save copy-to-clipboard
+npm i --save copy-html-to-clipboard
 ```
 + Can be utilized using [wzrd.in](https://wzrd.in/). Add following script to your page:
 ```html
-<script src="https://wzrd.in/standalone/copy-to-clipboard@latest" async></script>
+<script src="https://wzrd.in/standalone/copy-html-to-clipboard@latest" async></script>
 ```
 You will have `window.copyToClipboard` exposed for you to use.
 
 # UI components based on this package:
++ [react-copy-html-to-clipboard](https://github.com/ukrbublik/react-copy-html-to-clipboard)
 + [react-copy-to-clipboard](https://github.com/nkbt/react-copy-to-clipboard)
 + [copy-button](https://github.com/sudodoki/copy-button)
 

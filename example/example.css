@@ -33,3 +33,6 @@ dt, dd, blockquote, address {
   font-size: 18px;
   min-height: 150px;
 }
+span.code {
+  background-color: lightgray;
+}
