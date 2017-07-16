@@ -1,6 +1,6 @@
 {
   "name": "copy-html-to-clipboard",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Copy text/html into clipboard using JS",
   "main": "index.js",
   "scripts": {
